@@ -7,13 +7,13 @@ class APIHandler {
   //     baseURL: process.env.REACT_APP_BASE_URL,
 
   //     withCredentials: true,
+  // blabla
   //   });
   // }
   constructor() {
     //Tabla de Posiciones
     this.axiosApp = axios.create({
-      baseURL: "https://footicket-app.onrender.com",
-
+      baseURL: "https://footicket-server.onrender.com/",
       withCredentials: true,
     });
   }
