@@ -1,20 +1,20 @@
 const axios = require("axios");
 
 class APIHandler {
-  constructor() {
-    //Tabla de Posiciones
-    this.axiosApp = axios.create({
-      baseURL: process.env.REACT_APP_BASE_URL,
-      withCredentials: true,
-    });
-  }
   // constructor() {
   //   //Tabla de Posiciones
   //   this.axiosApp = axios.create({
-  //     baseURL: "https://footicket-server.onrender.com/",
+  //     baseURL: process.env.REACT_APP_BASE_URL,
   //     withCredentials: true,
   //   });
   // }
+  constructor() {
+    //Tabla de Posiciones
+    this.axiosApp = axios.create({
+      baseURL: "https://footicket-server.onrender.com/",
+      withCredentials: true,
+    });
+  }
 
   getAllMatches = (country) => this.axiosApp.get(`/matches/league/${country}`);
   getTeamId = (name) => this.axiosApp.get(`/matches/team/${name}`);
