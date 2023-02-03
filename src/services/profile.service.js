@@ -17,7 +17,7 @@ import axios from "axios";
 class ProfileService {
   constructor() {
     this.app = axios.create({
-      baseURL: "https://footicket-server.onrender.com/",
+      baseURL: "https://footicket-server.onrender.com/profile-user",
       withCredentials: true,
     });
   }
