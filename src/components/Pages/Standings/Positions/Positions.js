@@ -1,9 +1,9 @@
 import APIHandler from "../../../../services/api.service";
-import {useParams} from "react-router";
-import {useState, useEffect} from "react";
-import {Spinner, Table} from "react-bootstrap";
+import { useParams } from "react-router";
+import { useState, useEffect } from "react";
+import { Spinner, Table } from "react-bootstrap";
 import "./Positions.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 // import NextMatches from "../NextMatches/NextMatches";
 // import Example from "../../Offcanvas/Example";
 
@@ -11,8 +11,7 @@ const footballAPI = new APIHandler();
 function Positions() {
   const [matchList, setMatchList] = useState([]);
   const [leagueList, setLeagueList] = useState([]);
-
-  const {country} = useParams();
+  const { country } = useParams();
 
   useEffect(() => {
     footballAPI
@@ -85,7 +84,7 @@ function Positions() {
 
             return (
               <tr>
-                <td className="rank" style={{backgroundColor: color}}>
+                <td className="rank" style={{ backgroundColor: color }}>
                   {match.rank}
                 </td>
                 <td>
@@ -96,7 +95,7 @@ function Positions() {
                         src={match.team.logo}
                         alt={match.team.name}
                         title="LaLiga"
-                        style={{width: "20px", margin: "2px"}}
+                        style={{ width: "20px", margin: "2px" }}
                       />
                     </span>
                   </Link>
@@ -112,19 +111,19 @@ function Positions() {
           })}
 
           <tr className="qualification">
-            <td style={{backgroundColor: "#007d01ad"}}></td>
+            <td style={{ backgroundColor: "#007d01ad" }}></td>
             <td colSpan={7}>Champions League</td>
           </tr>
           <tr className="qualification">
-            <td style={{backgroundColor: "#fdff007a"}}></td>
+            <td style={{ backgroundColor: "#fdff007a" }}></td>
             <td colSpan={7}>Europa League</td>
           </tr>
           <tr className="qualification">
-            <td style={{backgroundColor: "#fea50070"}}></td>
+            <td style={{ backgroundColor: "#fea50070" }}></td>
             <td colSpan={7}>Europa Conference</td>
           </tr>
           <tr className="qualification">
-            <td style={{backgroundColor: "#ff02008f"}}></td>
+            <td style={{ backgroundColor: "#ff02008f" }}></td>
             <td colSpan={7}>Descenso</td>
           </tr>
         </tbody>
