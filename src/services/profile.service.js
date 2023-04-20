@@ -13,7 +13,6 @@ import axios from "axios";
 
 // export default ProfileService;
 
-
 class ProfileService {
   constructor() {
     this.app = axios.create({

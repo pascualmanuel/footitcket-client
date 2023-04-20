@@ -1,8 +1,8 @@
-import React, {Component} from "react";
-import {Form, Button, Col} from "react-bootstrap";
+import React, { Component } from "react";
+import { Form, Button, Col } from "react-bootstrap";
 import AuthService from "../../../services/auth.service";
-import {Link} from "react-router-dom";
-import {useHistory} from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import "../../Styles/styles.css";
 
@@ -28,15 +28,13 @@ class LoginPage extends Component {
         this.props.history.push("/");
       })
 
-      .catch((err) =>
-        console.log(err.response.data.message, "yo soy el error!!")
-      );
+      .catch((err) => console.log(err.response.data.message));
   };
 
   handleInputChange = (e) => {
-    const {name, value} = e.currentTarget;
+    const { name, value } = e.currentTarget;
 
-    this.setState({[name]: value});
+    this.setState({ [name]: value });
   };
 
   render() {
@@ -48,7 +46,7 @@ class LoginPage extends Component {
         <div className="auth-cont">
           <div className="auth-cont-2">
             <Col>
-              <h2 style={{textAlign: "center"}}> Iniciar Sesion</h2>
+              <h2 style={{ textAlign: "center" }}> Iniciar Sesión</h2>
               <hr></hr>
               <br></br>
               <br></br>
